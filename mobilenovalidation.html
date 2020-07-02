@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>100ravpatel.co.in</title>
+<script>
+function validate()
+{
+     var text=document.getElementById("user").value;
+	 var regx=/^[7-9]\d{9}$/;
+	 if(regx.test(text))
+	 {
+	   document.getElementById("lab").innerHTML="valid";
+	   document.getElementById("lab").style.visibility="visible";
+	   document.getElementById("lab").style.color="green";
+	   user.style.border="solid 3px green";
+	 }
+	 else
+	 {
+	   document.getElementById("lab").innerHTML="Invalid";
+	   document.getElementById("lab").style.visibility="visible";
+	   document.getElementById("lab").style.color="red";
+	   user.style.border="solid 3px red";
+	 }	 
+}
+</script>
+</head>
+<body>
+<form>
+<input id="user" placeholder="Ph-No" type="text"><br>
+<label id="lab" style="color:red;visibility:hidden">Invalid</label>
+<br><br>
+<button onclick="validate()" type="button">Submit</button>
+</form>
+</body>
+
+</html>
